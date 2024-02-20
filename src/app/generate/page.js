@@ -66,9 +66,9 @@ function FlashcardsScreen() {
     <div>
       <h1 className="Heading">FLASHCARD GENERATOR</h1>
       <div className="CenterContent">
-        <h2>Upload or Paste Content</h2>
+        <h2 className="CenterItem">Upload or Paste Content</h2>
         <PdfToData className="AppButton" onFileSelected={handleFileSelected} />
-        <div>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <text className="CenterItem"> or </text>
           <textarea
             value={text}
@@ -79,7 +79,7 @@ function FlashcardsScreen() {
           />
         </div>
 
-        <h2>Select Flashcards & Generate</h2>
+        <h2>Select Number of Flashcards & Generate</h2>
 
         <div style={{ display: "flex", alignItems: "center" }}>
           <label style={{ fontStyle: "italic", marginRight: "5px" }}>

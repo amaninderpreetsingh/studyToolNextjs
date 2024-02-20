@@ -16,6 +16,7 @@
 }
 
 body {
+  color: white;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -150,4 +151,9 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 .AppButton:active {
   transform: scale(0.98); /* Slightly shrink when clicked */
   background-color: var(--accent-color); /* Maintain green color on click */
+}
+
+.Invisible {
+  visibility: hidden;
+  opacity: 0;
 }

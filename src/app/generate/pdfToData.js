@@ -39,8 +39,9 @@ const PdfToData = (props) => {
   return (
     <div>
       <label htmlFor="pdfInput" className="generate-pdf-button button">
-        <span>Upload PDF</span>
+        <span className="AppButton">Upload PDF</span>
         <input
+          className="Invisible"
           type="file"
           accept=".pdf"
           onChange={handleFileChange}

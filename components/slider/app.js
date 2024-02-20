@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./style.css";
+
 const CarouselSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const slides = [
