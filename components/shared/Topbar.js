@@ -13,10 +13,13 @@ function Topbar() {
   return (
     <nav className="topbar">
       <Link href="/" className="flex items-center gap-4">
-        <Image src="/assets/studyLogo.png" alt="logo" width={40} height={40} />
-        <p className="text-heading3-bold text-light-1 max-xs:hidden">
-          Study Tools
-        </p>
+        <Image
+          src="/assets/FlashAI_LogoNoText.jpeg"
+          alt="logo"
+          width={40}
+          height={40}
+        />
+        <p className="text-heading3-bold text-light-1 max-xs:hidden">FlashAI</p>
       </Link>
 
       <div className="flex items-center w-full flex-1 flex-row gap-6 px-6">

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* CarouselSlider.module.css or a global stylesheet */
+:root {
+    --primary-color: #121212; /* Example primary color */
+    --secondary-color:  #9FE2BF ; /* Example secondary color */
+    --accent-color: #00796B; /* Deep teal */
+    --background-color: #2a2a2a; /* Example background color */
+  }
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -15,7 +22,7 @@
 
 body{
     margin: 0;
-    background-color: #000;
+    background-color: var(--background-color);
     color: #eee;
     font-family: Poppins;
     font-size: 12px;
@@ -166,7 +173,7 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: var(--background-color);
     border: none;
     color: #fff;
     font-family: monospace;
@@ -335,3 +342,24 @@ header a{
         font-size: 30px;
     }
 }
+
+.buttons {
+    background-color: var(--secondary-color); /* Light green background */
+    color: black; /* White text color for contrast */
+    border: none; /* No border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor indicates it's clickable */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect and press */
+  }
+  
+  .buttons:hover, .AppButton:focus {
+    background-color: var(--accent-color); /* Change to green on hover/focus */
+  }
+  
+  .buttons:active {
+    transform: scale(0.98); /* Slightly shrink when clicked */
+    background-color: var(--accent-color); /* Maintain green color on click */
+  }

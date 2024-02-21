@@ -7,11 +7,10 @@ const CarouselSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const slides = [
     {
-      img: "image/img5.png",
-      //   author: "LUNDEV",
-      //   title: "DESIGN SLIDER",
-      topic: "Platform",
-      description: "Cloud-based platform for manegement",
+      img: "image/FlashAI_Logo.png",
+      topic: "Welcome to FlashAI...",
+      description:
+        "Automate your flashcard creation and enhance your learning experience with AI-powered technology.",
       id: "img1",
     },
     {

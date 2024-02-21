@@ -12,7 +12,7 @@ function Sidebar() {
           <img src="path_to_profile_picture.jpg" alt="Profile" />
         </div>
         <div className="ProfileName">
-          <span>Dilraj Sandhu</span>
+          <span>First Last</span>
         </div>
       </div>
 
