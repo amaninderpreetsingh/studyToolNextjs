@@ -5,9 +5,22 @@
 @layer components {
   /* main */
   .main-container {
-    @apply flex min-h-screen flex-1 flex-col pb-10 pt-28 max-md:pb-32;
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    flex-grow: 1; /* Allows the container to grow to fill available space */
+    min-height: 100vh; /* Minimum height of the viewport's height */
+    padding-bottom: 2.5rem; /* 40px if 1rem = 16px */
+    padding-top: 5rem; /* 112px if 1rem = 16px */
   }
-
+  
+  /* Responsive padding-bottom for screens smaller than the 'md' breakpoint */
+  /* Assuming 'md' breakpoint is 768px, which is a common default in frameworks like Tailwind */
+  @media (max-width: 768px) {
+    .main-container {
+      padding-bottom: 8rem; /* 128px if 1rem = 16px */
+    }
+  }
+  
   /* Head Text */
   .head-text {
     @apply text-heading2-bold text-light-1;

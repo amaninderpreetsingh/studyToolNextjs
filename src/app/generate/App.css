@@ -10,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: var(--background-color);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -215,6 +215,7 @@ body {
   width: 100vw;
   text-align: center;
   padding-bottom: 200px;
+  margin-top: 0px;
 }
 
 .sectionL {
