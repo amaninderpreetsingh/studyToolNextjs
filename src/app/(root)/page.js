@@ -26,6 +26,11 @@ export default function Home() {
               <button className="AppButton">Sign in</button>
             </SignInButton>
           </SignedOut>
+          <SignInButton>
+            <SignedOut>
+              <button className="AppButton">Log off</button>
+            </SignedOut>
+          </SignInButton>
         </div>
       </nav>
       <div className="head-text"></div>
