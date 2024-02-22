@@ -1,6 +1,13 @@
 import { UserButton } from "@clerk/nextjs";
 import CarouselSlider from "../../../components/slider/app";
 import "../generate/App.css";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from "@clerk/nextjs";
+import Link from "next/link";
 // Add other icons as needed
 
 export default function Home() {
@@ -14,7 +21,11 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
-          <button className="AppButton">Sign in</button>
+          <SignedOut>
+            <SignInButton>
+              <button className="AppButton">Sign in</button>
+            </SignInButton>
+          </SignedOut>
         </div>
       </nav>
       <div className="head-text"></div>
@@ -24,7 +35,9 @@ export default function Home() {
           Using the power of AI, start creating your personalized flashcards
           today and enhance your learning experience!
         </p>
-        <button className="ctaButton"> Try now! </button>
+        <Link href={"/generate"}>
+          <button className="ctaButton"> Try now! </button>
+        </Link>
       </section>
       <section id="about" className="sectionL">
         <h1 className="HomeHeading">About Us</h1>

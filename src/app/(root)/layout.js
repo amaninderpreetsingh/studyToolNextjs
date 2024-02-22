@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
         <body className={inter.className}>
-          <Topbar />
+          {/* <Topbar /> */}
           <section className="main-container">
             <div className="w-full max-w-4xl">{children}</div>
           </section>
