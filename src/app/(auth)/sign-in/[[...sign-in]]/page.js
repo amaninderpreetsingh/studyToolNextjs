@@ -1,8 +1,7 @@
 import { SignIn } from "@clerk/nextjs";
-import Topbar from "../../../../../components/shared/Topbar";
 
 import "../../../globals.css"; // Make sure to import your CSS file correctly
-import { light } from "@mui/material/styles/createPalette";
+// import { light } from "@mui/material/styles/createPalette";
 
 export default function Page() {
   return (

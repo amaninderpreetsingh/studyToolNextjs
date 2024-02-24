@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import PdfToData from "./pdfToData";
 import Flashcard from "./flashcard";
-import "./App.css";
+import "@/app/globals.css";
 
 function FlashcardsScreen() {
   const [text, setText] = useState("");

@@ -1,6 +1,4 @@
-import { UserButton } from "@clerk/nextjs";
-import CarouselSlider from "../../../components/slider/app";
-import "../generate/App.css";
+import "@/app/globals.css";
 import {
   SignedIn,
   SignedOut,
@@ -17,26 +15,26 @@ export default function Home() {
         <div className="logo">FlashAI</div>
         <div className="nav-container">
           <div className="nav-items">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
           </div>
           <SignedOut>
             <SignInButton>
-              <button className="AppButton">Sign in</button>
+              <button className="buttonWave">Sign in</button>
             </SignInButton>
           </SignedOut>
 
           <SignedIn>
             <SignOutButton>
-              <button className="AppButton">Log off</button>
+              <button className="buttonWave">Log off</button>
             </SignOutButton>
           </SignedIn>
         </div>
       </nav>
       <div className="head-text"></div>
       <section id="home" className="sectionD cta">
-        <h1 className="HomeHeading">AI Generate Flashcards</h1>
+        <h1 className="HomeHeading">AI Generated Flashcards</h1>
         <p className="HomePara">
           Using the power of AI, start creating your personalized flashcards
           today and enhance your learning experience!
