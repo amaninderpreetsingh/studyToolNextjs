@@ -23,7 +23,7 @@ export const SidebarData = [
     link: "/url holder text",
   },
   {
-    title: "Study with Friends",
+    title: "Share or Import CarSds",
     icon: <Diversity3Icon />,
     link: "/url holder text",
   },
