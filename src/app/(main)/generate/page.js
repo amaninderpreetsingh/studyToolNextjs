@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import PdfToData from "./pdfToData";
-import Flashcard from "./flashcard";
+import Flashcard from "../../../components/sidebar/flashcards/flashcard";
 import "@/app/globals.css";
 
 function FlashcardsScreen() {
