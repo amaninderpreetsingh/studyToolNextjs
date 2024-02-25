@@ -16,7 +16,7 @@ function FlashcardsScreen() {
   };
 
   const getFlashcards = async () => {
-    const API_KEY = "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";
+    const API_KEY = "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";
 
     if (!loading) {
       setLoading(true);
