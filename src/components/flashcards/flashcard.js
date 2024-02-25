@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "./flashcardStyles.css";
+import "../flashcards/flashcardStyles.css";
 
 const Flashcard = (props) => {
   const [showBack, setShowBack] = useState(false);
