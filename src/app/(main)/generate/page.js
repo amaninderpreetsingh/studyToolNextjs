@@ -66,6 +66,11 @@ function FlashcardsScreen() {
     <div>
       <h1 className="Heading">FLASHCARD GENERATOR</h1>
       <div className="CenterContent">
+        <div classname="genContent">
+          <div className="genCard">Import Flashcards</div>
+          <div className="genCard">Create Flashcards</div>
+          <div className="genCard">Generate Flashcards</div>
+        </div>
         <h2 className="CenterItem">Upload or Paste Content</h2>
         <PdfToData className="AppButton" onFileSelected={handleFileSelected} />
         <div style={{ display: "flex", alignItems: "center" }}>

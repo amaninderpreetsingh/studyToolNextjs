@@ -12,7 +12,17 @@ export default function Home() {
   return (
     <>
       <nav className="navbar">
-        <div className="logo">FlashAI</div>
+        <button
+          class="buttonLogo"
+          data-text="Awesome"
+          onclick="location.href='#home'"
+        >
+          <span class="actual-text">&nbsp;FlashAI&nbsp;</span>
+          <span aria-hidden="true" class="hover-text">
+            &nbsp;FlashAI&nbsp;
+          </span>
+        </button>
+
         <div className="nav-container">
           <div className="nav-items">
             <a href="#home">HOME</a>
@@ -33,17 +43,21 @@ export default function Home() {
         </div>
       </nav>
       <div className="head-text"></div>
-      <section id="home" className="sectionD cta">
-        <h1 className="HomeHeading">AI Generated Flashcards</h1>
+      <section id="home" className="sectionD">
+        <h1 className="HomeHeading">
+          Elevate Your Study Game with AI-Generated Flashcards
+        </h1>
         <p className="HomePara">
-          Using the power of AI, start creating your personalized flashcards
-          today and enhance your learning experience!
+          Welcome to FlashAI, where we're revolutionizing the way students
+          study. Transform your notes into dynamic, interactive flashcards with
+          the latest AI technology. Begin crafting your custom flashcards now
+          and take your learning journey to new heights!
         </p>
         {/* Get Started (CTA) Button */}
         <div class="button-container">
           <Link href="/generate">
             <button class="cssbuttons-io-button">
-              Get started
+              Create Flashcards
               <div class="icon">
                 <svg
                   height="24"
@@ -54,7 +68,7 @@ export default function Home() {
                   <path d="M0 0h24v24H0z" fill="none"></path>
                   <path
                     d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
+                    fill="#00A97F"
                   ></path>
                 </svg>
               </div>
