@@ -67,9 +67,39 @@ function FlashcardsScreen() {
       <h1 className="Heading">FLASHCARD GENERATOR</h1>
       <div className="CenterContent">
         <div classname="genContent">
-          <div className="genCard">Import Flashcards</div>
-          <div className="genCard">Create Flashcards</div>
-          <div className="genCard">Generate Flashcards</div>
+          <div className="card-container">
+            <div class="card">
+              <div class="card-details">
+                <p class="text-title">Import</p>
+                <p class="text-body">
+                  Utilize our import feature to seamlessly integrate flashcards
+                  from Quizlet. Additional platforms will be supported in the
+                  future.
+                </p>
+              </div>
+              <button class="card-button">Begin Import</button>
+            </div>
+            <div class="card">
+              <div class="card-details">
+                <p class="text-title">Create</p>
+                <p class="text-body">
+                  Engage with our intuitive interface to craft personalized
+                  flashcards for your study needs.
+                </p>
+              </div>
+              <button class="card-button">New Flashcards</button>
+            </div>
+            <div class="card">
+              <div class="card-details">
+                <p class="text-title">Generate</p>
+                <p class="text-body">
+                  Leverage our AI technology to automatically generate
+                  flashcards from your content.
+                </p>
+              </div>
+              <button class="card-button">Auto-Create</button>
+            </div>
+          </div>
         </div>
         <h2 className="CenterItem">Upload or Paste Content</h2>
         <PdfToData className="AppButton" onFileSelected={handleFileSelected} />

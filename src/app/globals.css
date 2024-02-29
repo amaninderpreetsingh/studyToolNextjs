@@ -469,3 +469,177 @@ body {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
 }
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 32%;
+  min-width: 15%; /* Ensures cards have a minimum width */
+  height: 300px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid var(--accent-color);
+  transition: 0.5s ease-out;
+  overflow:visible;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 5px; /* Adds a little space between cards when they wrap */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+}
+
+.card-details {
+  color: var(--accent-color);
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-button {
+  width: 60%;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  border-radius: .3em;
+  font-weight: 500;
+  border: 1px solid;
+  border-color: var(--accent-color);
+  z-index: 1;
+}
+
+/* Adjust button hover effect */
+.card-button:hover {
+  background-color: var(--accent-color);
+}
+
+.text-body {
+  color: var(--secondary-color);
+  font-style: italic;
+  overflow: hidden;
+  .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 20%;
+  min-width: 190px; /* Ensures cards have a minimum width */
+  height: 254px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid var(--accent-color);
+  transition: 0.5s ease-out;
+  overflow: visible;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px; /* Adds a little space between cards when they wrap */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+}
+
+.card-details {
+  color: var(--accent-color);
+  height: 100%;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-button {
+  width: 60%;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: .4rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  border-radius: .3em;
+  font-weight: 500;
+  border: 1px solid;
+  border-color: var(--accent-color);
+  z-index: 1;
+}
+
+/* Adjust button hover effect */
+.card-button:hover {
+  background-color: var(--accent-color);
+}
+
+.text-body {
+  color: rgb(134, 134, 134);
+  font-style: italic;
+  font-size: .8em;
+}
+
+.text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Card hover effect */
+.card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+}
+
+.text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  position:absolute;
+}
+
+/* Card hover effect */
+.card:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
