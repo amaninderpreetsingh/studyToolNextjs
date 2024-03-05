@@ -43,7 +43,6 @@ export default function Home() {
           </SignedIn>
         </div>
       </nav>
-      <div className="head-text"></div>
       <section id="home" className="sectionD">
         <h1 className="HomeHeading">Revolutionize Your Learning</h1>
         <p className="HomePara">
