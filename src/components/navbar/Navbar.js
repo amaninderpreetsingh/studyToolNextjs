@@ -1,7 +1,6 @@
 // Navbar.js
 import React from "react";
-import Link from "next/link"; // Updated import path
-
+import Link from "next/link";
 import {
   SignedIn,
   SignedOut,
@@ -11,8 +10,10 @@ import {
 
 function Navbar() {
   const handleNavigation = (sectionId) => {
-    // Consider using a library for smooth scrolling in React
-    // document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -28,9 +29,10 @@ function Navbar() {
 
       <div className="nav-container">
         <div className="nav-items">
-          <a onClick={() => handleNavigation("home")}>HOME</a>
-          <a onClick={() => handleNavigation("about")}>ABOUT</a>
-          <a onClick={() => handleNavigation("contact")}>CONTACT</a>
+          {/* Use buttons for actions and not navigation */}
+          <button onClick={() => handleNavigation("home")}>HOME</button>
+          <button onClick={() => handleNavigation("about")}>ABOUT</button>
+          <button onClick={() => handleNavigation("contact")}>CONTACT</button>
         </div>
         <SignedOut>
           <SignInButton>
