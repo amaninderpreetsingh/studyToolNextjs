@@ -6,7 +6,6 @@ import {
   SignOutButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
-import "@/components/navbar/Navbar";
 import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
