@@ -6,7 +6,7 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
-export const SidebarData = [
+export const MainSidebarData = [
   {
     title: "Create Flashcard",
     icon: <CreateIcon />,
@@ -23,18 +23,21 @@ export const SidebarData = [
     link: "/url holder text",
   },
   {
-    title: "Share or Import CarSds",
+    title: "Share Cards",
     icon: <Diversity3Icon />,
     link: "/url holder text",
   },
+];
+
+export const BottomSidebarData = [
   {
     title: "Settings",
     icon: <SettingsIcon />,
-    link: "/url holder text",
+    link: "/settings",
   },
   {
     title: "Sign Out",
     icon: <ExitToAppIcon />,
-    link: "/url holder text",
+    link: "/sign-out",
   },
 ];

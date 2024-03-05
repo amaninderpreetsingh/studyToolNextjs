@@ -1,41 +1,64 @@
 "use client";
 import React from "react";
-import "@/app/globals.css"; // Ensure this path is correct based on your project structure
-import { SidebarData } from "./SidebarData"; // Ensure this import is correct
+import "@/app/globals.css";
+import { MainSidebarData, BottomSidebarData } from "./SidebarData"; // Corrected imports
 import { useUser } from "@clerk/nextjs";
 
 function Sidebar() {
   const { user } = useUser();
-  console.log(user && user.firstName ? user.firstName : "");
+  const defaultImagePath = "/image/notecardsStack.png";
+
   return (
     <div className="Sidebar">
       <div className="ProfileHeader">
         <div className="ProfileImage">
-          {/* Update the src attribute as needed or dynamically load the user's profile picture if available */}
-          <img src="path_to_profile_picture.jpg" alt="Profile" />
+          {/* Dynamically load the user's profile picture if available, otherwise load a default image */}
+          <img
+            src={user?.imageUrl ? user.imageUrl : defaultImagePath}
+            alt="Profile"
+          />
         </div>
         <div className="ProfileName">
           {/* This will display the user's name fetched from Clerk */}
-          <span>{user ? user.firstName : ""}</span>
+          <span> Hi {user?.firstName || ""}!</span>
         </div>
       </div>
-
       <ul className="SidebarList">
-        {/* This maps over your SidebarData to render each sidebar item */}
-        {SidebarData.map((val, key) => {
+        {/* This maps over MainSidebarData to render each main sidebar item */}
+        {MainSidebarData.map((val, key) => {
           return (
             <li
-              key={key} // Using the index as a key is generally okay for static lists
+              key={key}
               className="row"
               onClick={() => {
-                window.location.pathname = val.link; // Changes the current page to the clicked sidebar item's link
+                window.location.pathname = val.link;
               }}
             >
-              <div id="icon">{val.icon}</div> <div id="title">{val.title}</div>
+              <div id="icon">{val.icon}</div>
+              <div id="title">{val.title}</div>
             </li>
           );
         })}
       </ul>
+      <div className="SidebarBottom">
+        <ul className="SidebarList">
+          {/* This maps over BottomSidebarData to render each bottom sidebar item */}
+          {BottomSidebarData.map((val, key) => {
+            return (
+              <li
+                key={key}
+                className="row"
+                onClick={() => {
+                  window.location.pathname = val.link;
+                }}
+              >
+                <div id="icon">{val.icon}</div>
+                <div id="title">{val.title}</div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
