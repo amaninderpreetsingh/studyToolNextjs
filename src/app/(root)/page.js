@@ -6,11 +6,13 @@ import {
   SignOutButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
-// Add other icons as needed
+import "@/components/navbar/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
   return (
     <>
+      {/* <Navbar> </Navbar> */}
       <nav className="navbar">
         <button
           class="buttonLogo"
