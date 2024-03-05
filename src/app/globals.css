@@ -172,7 +172,7 @@ body {
 }
 
 .ProfileName {
-  color: black; /* Text color for name */
+  color: var(--primary-color); /* Text color for name */
   font-size: 1.5em; /* Adjusted font size for the name */
   white-space: nowrap;
   overflow: hidden;
