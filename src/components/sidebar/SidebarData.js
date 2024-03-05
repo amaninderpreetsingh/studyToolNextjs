@@ -10,7 +10,7 @@ export const SidebarData = [
   {
     title: "Create Flashcard",
     icon: <CreateIcon />,
-    link: "/url holder text",
+    link: "/generate",
   },
   {
     title: "My Flashcard",

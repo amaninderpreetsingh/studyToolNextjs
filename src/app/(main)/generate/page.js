@@ -64,17 +64,16 @@ function FlashcardsScreen() {
 
   return (
     <div>
-      <h1 className="Heading">FLASHCARD GENERATOR</h1>
       <div className="CenterContent">
-        <div classname="genContent">
+        <h1 className="Heading HomeHeading">Flashcard Studio</h1>
+        <div>
           <div className="card-container">
             <div class="card">
               <div class="card-details">
                 <p class="text-title">Import</p>
                 <p class="text-body">
-                  Utilize our import feature to seamlessly integrate flashcards
-                  from Quizlet. Additional platforms will be supported in the
-                  future.
+                  Seamlessly import flashcards from Quizlet, with more platforms
+                  coming soon.
                 </p>
               </div>
               <button class="card-button">Begin Import</button>
@@ -83,8 +82,8 @@ function FlashcardsScreen() {
               <div class="card-details">
                 <p class="text-title">Create</p>
                 <p class="text-body">
-                  Engage with our intuitive interface to craft personalized
-                  flashcards for your study needs.
+                  Use our intuitive interface to create custom flashcards
+                  easily.
                 </p>
               </div>
               <button class="card-button">New Flashcards</button>
@@ -93,31 +92,43 @@ function FlashcardsScreen() {
               <div class="card-details">
                 <p class="text-title">Generate</p>
                 <p class="text-body">
-                  Leverage our AI technology to automatically generate
-                  flashcards from your content.
+                  Auto-generate flashcards with our AI, directly from your
+                  notes.
                 </p>
               </div>
               <button class="card-button">Auto-Create</button>
             </div>
           </div>
         </div>
-        <h2 className="CenterItem">Upload or Paste Content</h2>
-        <PdfToData className="AppButton" onFileSelected={handleFileSelected} />
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <text className="CenterItem"> or </text>
-          <textarea
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Paste content here..."
-            cols={50}
-            rows={10}
-          />
+
+        <h2 className="Heading2">Upload or Paste Content (Generate) </h2>
+
+        <div className="contain2">
+          <PdfToData onFileSelected={handleFileSelected}></PdfToData>
+          <text> or </text>
+          <div
+            className="Rdiv"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="Paste content here..."
+              cols={50}
+              rows={10}
+            />
+          </div>
         </div>
 
-        <h2>Select Number of Flashcards & Generate</h2>
+        <h2 className="Heading2">Select Number of Flashcards & Generate</h2>
 
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <label style={{ fontStyle: "italic", marginRight: "5px" }}>
+        <div
+          className="contain2"
+          style={{ display: "flex", alignItems: "center", width: "100%" }}
+        >
+          <label
+            style={{ fontStyle: "italic", marginRight: "5px", flexShrink: 0 }}
+          >
             Number of Flashcards to generate: {selectedValue}
           </label>
           <input
@@ -126,8 +137,10 @@ function FlashcardsScreen() {
             max="50"
             value={selectedValue}
             onChange={(e) => setSelectedValue(parseInt(e.target.value))}
+            style={{ flex: "1", marginRight: "5px" }} // Stretches the slider to fill available space
           />
         </div>
+
         <div>
           <button
             className="AppButton"
@@ -141,7 +154,7 @@ function FlashcardsScreen() {
         {/* Display generated flashcards */}
         {!loading && flashcards && (
           <div>
-            <h2 style={{ textAlign: "center" }}>Generated Flashcards</h2>
+            <h2 className="Heading2">Generated Flashcards</h2>
             <div>
               {flashcards.map((card, index) => {
                 return (

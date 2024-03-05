@@ -44,9 +44,7 @@ export default function Home() {
       </nav>
       <div className="head-text"></div>
       <section id="home" className="sectionD">
-        <h1 className="HomeHeading">
-          Elevate Your Study Game with AI-Generated Flashcards
-        </h1>
+        <h1 className="HomeHeading">Revolutionize Your Learning</h1>
         <p className="HomePara">
           Welcome to FlashAI, where we're revolutionizing the way students
           study. Transform your notes into dynamic, interactive flashcards with
