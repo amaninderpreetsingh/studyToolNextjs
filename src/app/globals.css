@@ -80,9 +80,10 @@ body {
     width: 265px;
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
     overflow-y: auto; /* Keeps the sidebar scrollable independently of the page content */
-    border-top: 1px solid var(--accent-color);
+    border-right: 4px solid var(--accent-color);
+
   }
   
   .SidebarList .row, .SidebarBottom .row {
@@ -92,7 +93,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color);
+    color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0 20px; /* Adds horizontal padding for content alignment */
   }
@@ -100,34 +101,33 @@ body {
   .SidebarList .row:hover, .SidebarBottom .row:hover {
     cursor: pointer;
     background-color: var(--accent-color);
-    color: white; /* Change text color to black */
+    color: black; /* Change text color to black */
     transition: background-color 0.5s ease;
   }
 
 .row #icon {
   display:flex;
   justify-content: center;
-  flex: 30%;
+  flex: 20%;
+  margin-right: 20px;
 }
 
 .row #title {
-  flex: 70%;
+  flex: 80%;
 }
 
-/* New container for the bottom items */
 .SidebarBottom {
   margin-top: auto; /* Pushes the container to the bottom */
   width: 100%; /* Full width of the sidebar */
 }
 
-/* You may want to have the same styling for rows in the bottom section */
 .SidebarBottom .row {
   width: 100%;
   height: 60px;
   list-style-type: none;
   margin: 0;
   display: flex;
-  color: var(--primary-color);
+  color: white;
   justify-content: center;
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -136,7 +136,7 @@ body {
 .SidebarBottom .row:hover {
   cursor: pointer;
   background-color: var(--accent-color);
-  color: white; /* Change text color to black */
+  color: black; /* Change text color to black */
   transition: background-color 0.5s ease;
 }
 
@@ -144,26 +144,37 @@ body {
   display: flex;
   height: 75px;
   align-items: center;
-  background-color:whitesmoke;
+  /* background-color: white; */
   padding: 20px;
   margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1em; /* Normalizing font size */
-  font-weight: 700;
-
+  /* background-image: linear-gradient(to bottom, whitesmoke, var(--secondary-color)); */
 }
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20%, 20%);
+  }
+}
+
+
 
 .ProfileImage {
   flex-shrink: 0; /* Prevents image container from shrinking */
   width: 50px;
   height: 50px;
-  border-radius: 10%; /* Circular image */
+  border-radius: 50%; /* Circular image */
   overflow: hidden;
   margin-right: 20px;
   background-color: var(--primary-color); /* Background color for image container */
   display: flex; /* Aligns the image inside the container */
   justify-content: center;
   align-items: center;
+  border: 2px solid var(--accent-color);
 }
 
 .ProfileImage img {
@@ -173,11 +184,12 @@ body {
 }
 
 .ProfileName {
-  color: var(--primary-color); /* Text color for name */
-  font-size: 1.2em; /* Adjusted font size for the name */
+  color: var(--accent-color); /* Text color for name */
+  font-size: 1.1em; /* Adjusted font size for the name */
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90%;
+  font-weight: 400;
 }
 
 .Heading {
@@ -223,7 +235,7 @@ body {
 }
 
 .AppButton:hover, .AppButton:focus {
-  background-color: var(--secondary-color); /* Change to green on hover/focus */
+  background-image: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
 }
 
 .AppButton:active {
@@ -536,7 +548,7 @@ body {
   background: var(--background-color);
   position: relative;
   padding: 1.8rem;
-  border: 2px solid var(--accent-color);
+  border: 4px solid var(--accent-color);
   transition: 0.5s ease-out;
   overflow:visible;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -566,7 +578,7 @@ body {
   width: 60%;
   border: none;
   background-color: var(--accent-color);
-  color: var(--primary-color);
+  color: black;
   font-size: 1rem;
   padding: .4rem 1rem;
   position: absolute;
@@ -576,21 +588,21 @@ body {
   transition: 0.3s ease-out;
   border-radius: .3em;
   font-weight: 500;
-  border: 1px solid;
-  border-color: var(--accent-color);
   z-index: 1;
 }
 
 /* Adjust button hover effect */
 .card-button:hover {
-  background-color: var(--secondary-color);
+  background-image: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
 }
 
 .text-body {
   color: whitesmoke;
   font-style: italic;
   overflow: hidden;
-  .card-container {
+}  
+  
+.card-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -602,7 +614,7 @@ body {
   min-width: 190px; /* Ensures cards have a minimum width */
   height: 254px;
   border-radius: 20px;
-  background: var(--primary-color);
+  background: var(--background-color);
   position: relative;
   padding: 1.8rem;
   border: 2px solid var(--accent-color);
@@ -634,7 +646,7 @@ body {
 .card-button {
   width: 60%;
   border: none;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: var(--primary-color);
   font-size: 1rem;
   padding: .4rem 1rem;
@@ -645,15 +657,15 @@ body {
   transition: 0.3s ease-out;
   border-radius: .3em;
   font-weight: 500;
-  border: 1px solid;
   border-color: var(--accent-color);
   z-index: 1;
 }
 
 /* Adjust button hover effect */
 .card-button:hover {
-  background-color: var(--accent-color);
+  background-image: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
 }
+
 
 .text-body {
   color: rgb(134, 134, 134);
@@ -675,7 +687,6 @@ body {
 .card:hover .card-button {
   transform: translate(-50%, 50%);
   opacity: 1;
-}
 }
 
 .text-title {

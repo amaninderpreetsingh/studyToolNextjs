@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import "@/app/globals.css";
-import Generator from "@/components/flashcards/generator";
+import Generator from "@/components/flashcards/Generator";
 
 function flashcardsCreatingScreen() {
   return (
