@@ -1,54 +1,85 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "@/components/navbar/Navbar";
 import "@/app/globals.css";
 import Generator from "@/components/flashcards/Generator";
 
-function flashcardsCreatingScreen() {
+function FlashcardsCreatingScreen() {
+  // State to manage visibility of each section
+  const [visibleSection, setVisibleSection] = useState("");
+
+  const handleButtonClick = (section) => {
+    setVisibleSection(section);
+  };
+
   return (
     <>
-      <Navbar />
       <div className="CenterContent">
-        <h1 className="Heading HomeHeading">Flashcard Studio</h1>
+        <h1 className="Heading">Flashcard Studio</h1>
         <div>
           <div className="card-container">
-            <div class="card">
-              <div class="card-details">
-                <p class="text-title">Import</p>
-                <p class="text-body">
+            <div className="card">
+              <div className="card-details">
+                <p className="text-title">Import</p>
+                <p className="text-body">
                   Seamlessly import flashcards from Quizlet, with more platforms
                   coming soon.
                 </p>
               </div>
-              <button class="card-button">Begin Import</button>
+              <button
+                className="card-button"
+                onClick={() => handleButtonClick("import")}
+              >
+                Begin Import
+              </button>
             </div>
-            <div class="card">
-              <div class="card-details">
-                <p class="text-title">Create</p>
-                <p class="text-body">
+            <div className="card">
+              <div className="card-details">
+                <p className="text-title">Create</p>
+                <p className="text-body">
                   Use our intuitive interface to create custom flashcards
                   easily.
                 </p>
               </div>
-              <button class="card-button">New Flashcards</button>
+              <button
+                className="card-button"
+                onClick={() => handleButtonClick("create")}
+              >
+                New Flashcards
+              </button>
             </div>
-            <div class="card">
-              <div class="card-details">
-                <p class="text-title">Generate</p>
-                <p class="text-body">
+            <div className="card">
+              <div className="card-details">
+                <p className="text-title">Generate</p>
+                <p className="text-body">
                   Auto-generate flashcards with our AI, directly from your
                   notes.
                 </p>
               </div>
-              <button class="card-button">Auto-Create</button>
+              <button
+                className="card-button"
+                onClick={() => handleButtonClick("generate")}
+              >
+                Auto-Create
+              </button>
             </div>
           </div>
         </div>
-        <Generator />
+        {/* Conditionally rendered sections */}
+        {visibleSection === "import" && (
+          <section className="SectionL">Content for Import</section>
+        )}
+        {visibleSection === "create" && (
+          <section className="SectionL">Content for Create</section>
+        )}
+        {visibleSection === "generate" && (
+          <section className="SectionL">
+            <Generator />
+          </section>
+        )}
       </div>
     </>
   );
 }
 
-export default flashcardsCreatingScreen;
+export default FlashcardsCreatingScreen;

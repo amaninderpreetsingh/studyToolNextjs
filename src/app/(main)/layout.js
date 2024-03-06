@@ -1,4 +1,5 @@
 import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "@/components/navbar/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 export const metadata = {
   title: "Next.js",
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body>
+          <Navbar />
           <Sidebar />
           <div className="App">{children}</div>
         </body>
