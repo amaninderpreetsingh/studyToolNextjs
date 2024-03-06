@@ -12,26 +12,20 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link href="/" passHref>
-        <a className="buttonLogo" data-text="Awesome">
+        <div className="buttonLogo" data-text="Awesome">
           <span className="actual-text">&nbsp;FlashAI&nbsp;</span>
           <span aria-hidden="true" className="hover-text">
             &nbsp;FlashAI&nbsp;
           </span>
-        </a>
+        </div>
       </Link>
 
       <div className="nav-container">
         <div className="nav-items">
           {/* Use Link for navigation. Adjust href values as needed */}
-          <Link href="/#home">
-            <a>HOME</a>
-          </Link>
-          <Link href="/#about">
-            <a>ABOUT</a>
-          </Link>
-          <Link href="/#contact">
-            <a>CONTACT</a>
-          </Link>
+          <Link href="/#home">HOME</Link>
+          <Link href="/#about">ABOUT</Link>
+          <Link href="/#contact">CONTACT</Link>
         </div>
         <SignedOut>
           <SignInButton>

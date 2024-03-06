@@ -11,38 +11,7 @@ import Navbar from "@/components/navbar/Navbar";
 export default function Home() {
   return (
     <>
-      {/* <Navbar> </Navbar> */}
-      <nav className="navbar">
-        <button
-          class="buttonLogo"
-          data-text="Awesome"
-          onclick="location.href='#home'"
-        >
-          <span class="actual-text">&nbsp;FlashAI&nbsp;</span>
-          <span aria-hidden="true" class="hover-text">
-            &nbsp;FlashAI&nbsp;
-          </span>
-        </button>
-
-        <div className="nav-container">
-          <div className="nav-items">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
-          </div>
-          <SignedOut>
-            <SignInButton>
-              <button className="buttonWave">Sign in</button>
-            </SignInButton>
-          </SignedOut>
-
-          <SignedIn>
-            <SignOutButton>
-              <button className="buttonWave">Log off</button>
-            </SignOutButton>
-          </SignedIn>
-        </div>
-      </nav>
+      <Navbar />
       <section id="home" className="sectionD">
         <h1 className="HomeHeading">Revolutionize Your Learning</h1>
         <p className="HomePara">
@@ -87,11 +56,27 @@ export default function Home() {
       <section id="contact" className="sectionD">
         <h1 className="HomeHeading">Contact Us</h1>
         <p className="HomePara">
-          We're here to help! For support, inquiries, or feedback, please get in
-          touch with us via email at [ email] or call us at [ phone number]. Our
-          team is dedicated to providing you with the assistance you need.
-          Follow us on [Social Media Links] to stay updated on the latest news
-          and updates.
+          We're here to help and keen to hear from you! Whether you have support
+          queries, feedback, or suggestions on how we can improve FlashAI, don't
+          hesitate to reach out. Email us at{" "}
+          <a href="mailto:FlashAI.info@gmail.com" className="ContactLink">
+            FlashAI.info@gmail.com
+          </a>{" "}
+          for any collaboration or inquiries. Our team is committed to providing
+          you with the support you need.
+        </p>
+        <p className="HomePara">
+          Stay updated on our latest developments and feature releases by
+          following our journey on{" "}
+          <a
+            href="https://github.com/DilrajS/FlashAI"
+            className="ContactLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          .
         </p>
       </section>
     </>

@@ -20,7 +20,7 @@ function Sidebar() {
         </div>
         <div className="ProfileName">
           {/* This will display the user's name fetched from Clerk */}
-          <span> Hi {user?.firstName || ""}!</span>
+          <span> Welcome {user?.firstName || ""}</span>
         </div>
       </div>
       <ul className="SidebarList">

@@ -73,17 +73,18 @@ body {
 
   .Sidebar {
     position: fixed;
-    top: 0;
+    top: 80px; /* Adjusted to the height of the navbar */
     left: 0;
-    z-index: 10;
-    height: 100vh;
+    z-index: 999; /* Ensuring it's slightly below the navbar if they overlap */
+    height: calc(100vh - 80px); /* Adjusted to ensure it fills the height below the navbar */
     width: 265px;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
-    overflow-y: auto;
+    background-color: whitesmoke;
+    overflow-y: auto; /* Keeps the sidebar scrollable independently of the page content */
+    border-top: 1px solid var(--accent-color);
   }
-
+  
   .SidebarList .row, .SidebarBottom .row {
     width: 100%;
     height: 60px;
@@ -91,16 +92,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 20px; /* Adds horizontal padding for content alignment */
   }
-
-.SidebarList .row:hover {
-  cursor: pointer;
-  background-color: var(--accent-color);
-  color: black; /* Change text color to black */
-  transition: background-color 0.5s ease;
-}
+  
+  .SidebarList .row:hover, .SidebarBottom .row:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white; /* Change text color to black */
+    transition: background-color 0.5s ease;
+  }
 
 .row #icon {
   display:flex;
@@ -125,7 +127,7 @@ body {
   list-style-type: none;
   margin: 0;
   display: flex;
-  color: white;
+  color: var(--primary-color);
   justify-content: center;
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -134,31 +136,30 @@ body {
 .SidebarBottom .row:hover {
   cursor: pointer;
   background-color: var(--accent-color);
-  color: black; /* Change text color to black */
+  color: white; /* Change text color to black */
   transition: background-color 0.5s ease;
 }
 
-
 .ProfileHeader {
   display: flex;
-  height: 100px;
+  height: 75px;
   align-items: center;
-  background-color: var(--accent-color);
-  padding: 10px;
-  margin-bottom: 25px;
+  background-color:whitesmoke;
+  padding: 20px;
+  margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1em; /* Normalizing font size */
   font-weight: 700;
-  box-sizing: border-box; 
+
 }
 
 .ProfileImage {
   flex-shrink: 0; /* Prevents image container from shrinking */
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 10%; /* Circular image */
   overflow: hidden;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: var(--primary-color); /* Background color for image container */
   display: flex; /* Aligns the image inside the container */
   justify-content: center;
@@ -173,8 +174,7 @@ body {
 
 .ProfileName {
   color: var(--primary-color); /* Text color for name */
-  font-size: 1.5em; /* Adjusted font size for the name */
-  white-space: nowrap;
+  font-size: 1.2em; /* Adjusted font size for the name */
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 90%;
@@ -326,13 +326,36 @@ body {
 
 
 .HomePara {
-  /* Slightly increased the min size for better readability */
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px; /* Maintain top margin */
   font-size: clamp(1rem, 1.5vw, 1.5rem); 
   color: var(--primary-color);
-  height: auto;
-  margin: 0;
-  padding: 40px 10%;
+  padding: 40px 10%; /* Adjust padding as needed */
+  text-align: center; /* Ensure text is centered, especially for multiline paragraphs */
   z-index: 10;
+}
+
+/* Link styling specific to .HomePara */
+.HomePara a {
+  color: var(--accent-color); /* Use the accent color for links to make them stand out */
+  text-decoration: none; /* Optional: remove underline from links */
+}
+
+.HomePara a:hover {
+  text-decoration: underline; /* Optional: underline on hover for better interaction feedback */
+}
+
+.ContactLink {
+  color: var(--accent-color); /* Replace with your actual color value or CSS variable */
+  text-decoration: none; /* Or 'underline' if you prefer */
+}
+
+.ContactLink:hover {
+  text-decoration: underline; /* Or 'none' if you prefer */
 }
 
  .AppButton:focus, .ctaButton:active {
