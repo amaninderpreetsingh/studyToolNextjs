@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "@/app/globals.css";
 import Generator from "@/components/flashcards/Generator";
 import Extractor from "@/components/flashcards/Extractor";
+import Creator from "@/components/flashcards/Creator";
 
 function FlashcardsCreatingScreen() {
   // State to manage visibility of each section
@@ -76,7 +77,9 @@ function FlashcardsCreatingScreen() {
         )}
         {visibleSection === "create" && (
           <section className="SectionL">
-            <div className="studioDiv">Content for Create</div>
+            <div className="studioDiv">
+              <Creator />
+            </div>
           </section>
         )}
         {visibleSection === "generate" && (

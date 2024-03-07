@@ -284,6 +284,10 @@ body {
   cursor: pointer; /* Cursor indicates it's clickable */
   transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect and press */
   margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .AppButton:hover, .AppButton:focus {
@@ -668,3 +672,73 @@ body {
   border-color: var(--secondary-color);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
+
+/* Additional styles for ManualFlashcardCreator component */
+.deckNameContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deckNameLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.deckNameInput {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
+
+.flashcardEntry {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flashcardSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageUploadLabel {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: gray;
+  cursor: pointer;
+}
+
+.pasteTextArea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
+
+.flashcardSide label,
+.imageUploadLabel {
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+/* Adjusting the button-container to provide more spacing above */
+.button-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Ensure img tags within the flashcardEntry are styled properly */
+.flashcardEntry img {
+  max-width: 100px; /* Or any size that fits your layout */
+  max-height: 100px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
