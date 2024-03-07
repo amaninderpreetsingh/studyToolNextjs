@@ -67,10 +67,14 @@ function FlashcardsCreatingScreen() {
         </div>
         {/* Conditionally rendered sections */}
         {visibleSection === "import" && (
-          <section className="SectionL">Content for Import</section>
+          <section className="SectionL">
+            <div className="studioDiv">Content for Import</div>
+          </section>
         )}
         {visibleSection === "create" && (
-          <section className="SectionL">Content for Create</section>
+          <section className="SectionL">
+            <div className="studioDiv">Content for Create</div>
+          </section>
         )}
         {visibleSection === "generate" && (
           <section className="SectionL">
