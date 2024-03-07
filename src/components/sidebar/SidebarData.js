@@ -6,6 +6,13 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from "@clerk/nextjs";
+
 export const MainSidebarData = [
   {
     title: "Create Flashcard",
@@ -15,17 +22,17 @@ export const MainSidebarData = [
   {
     title: "My Flashcard",
     icon: <FormatListBulletedIcon />,
-    link: "/url holder text",
+    link: "/mycards",
   },
   {
     title: "My Progress",
     icon: <TimelineIcon />,
-    link: "/url holder text",
+    link: "/myprogress",
   },
   {
     title: "Share Cards",
     icon: <Diversity3Icon />,
-    link: "/url holder text",
+    link: "/share",
   },
 ];
 
@@ -38,6 +45,10 @@ export const BottomSidebarData = [
   {
     title: "Sign Out",
     icon: <ExitToAppIcon />,
+    // <SignedIn>
+    // <SignOutButton>
     link: "/sign-out",
+    // </SignOutButton>
+    // </SignedIn>
   },
 ];

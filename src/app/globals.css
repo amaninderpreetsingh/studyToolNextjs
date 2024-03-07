@@ -213,6 +213,7 @@ body {
   box-sizing: border-box;
   z-index: 10;
   text-shadow: .02em .02em 0px var(--background-color);
+  margin-bottom: 20px;
 }
 
 .studioDiv{

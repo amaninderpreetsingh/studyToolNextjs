@@ -1,10 +1,4 @@
 import "@/app/globals.css";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignOutButton,
-} from "@clerk/nextjs";
 import Link from "next/link";
 import Navbar from "@/components/navbar/Navbar";
 

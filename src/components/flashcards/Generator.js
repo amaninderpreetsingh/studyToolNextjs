@@ -74,7 +74,7 @@ function Generator() {
         </div>
       </div>
 
-      <h2 className="Heading2">Select Number of Flashcards & Generate</h2>
+      <h2 className="Heading2">Step 2: Select Flashcard Amount</h2>
       <div className="contain2">
         <label
           style={{ fontStyle: "italic", marginRight: "5px", flexShrink: 0 }}
