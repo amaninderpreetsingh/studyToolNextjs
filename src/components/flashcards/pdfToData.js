@@ -39,7 +39,7 @@ const PdfToData = (props) => {
   return (
     <div className="Ldiv">
       <label htmlFor="pdfInput" className="generate-pdf-button button">
-        <span className="AppButton">Upload PDF</span>
+        <span className="AppButton uploadPdfButton">Upload PDF</span>
         <input
           className="Invisible"
           type="file"

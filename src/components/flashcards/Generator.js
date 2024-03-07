@@ -58,27 +58,24 @@ function Generator() {
   };
 
   return (
-    <div>
-      <h2 className="Heading2">Upload or Paste Content (Generate)</h2>
+    <div className="studioDiv">
+      <h2 className="Heading2">Step 1: Upload or Paste Notes</h2>
       <div className="contain2">
         <PdfToData onFileSelected={handleFileSelected} />
-        <span> or </span>
         <div className="Rdiv" style={{ display: "flex", alignItems: "center" }}>
           <textarea
+            className="pasteTextArea"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Paste content here..."
-            cols="50"
-            rows="10"
+            placeholder="Paste Notes Here..."
+            cols="60"
+            rows="4"
           />
         </div>
       </div>
 
       <h2 className="Heading2">Select Number of Flashcards & Generate</h2>
-      <div
-        className="contain2"
-        style={{ display: "flex", alignItems: "center", width: "100%" }}
-      >
+      <div className="contain2">
         <label
           style={{ fontStyle: "italic", marginRight: "5px", flexShrink: 0 }}
         >
@@ -92,12 +89,15 @@ function Generator() {
           onChange={(e) => setSelectedValue(parseInt(e.target.value))}
           style={{ flex: "1", marginRight: "5px" }}
         />
-      </div>
-
-      <div>
-        <button className="AppButton" disabled={!text} onClick={getFlashcards}>
-          Generate Flashcards
-        </button>
+        <div>
+          <button
+            className="AppButton uploadPdfButton"
+            disabled={!text}
+            onClick={getFlashcards}
+          >
+            Generate Flashcards
+          </button>
+        </div>
       </div>
 
       {!loading && flashcards.length > 0 && (

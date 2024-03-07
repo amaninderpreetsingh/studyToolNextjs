@@ -207,12 +207,56 @@ body {
 
 .Heading2 {
   display: flex;
-  margin: 10% 0 1% 0; /* Top, Right, Bottom margins + Left margin to account for sidebar */
-  font-size: 2em;
-  color: var(--primary-color);
+  font-size: 1.7em;
+  color: var(--accent-color);
+  font-weight: 600;
   box-sizing: border-box;
   z-index: 10;
+  text-shadow: .02em .02em 0px var(--background-color);
 }
+
+.studioDiv{
+  background-color: white;
+  padding: 3% 5%;
+  margin: 75px 10px;
+  border: var(--accent-color);
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  overflow: hidden;
+}
+
+.contain2 {
+  display: flex;
+  justify-content: space-around; /* Distributes space evenly */
+  align-items: center;
+  /* border: 3px solid black; */
+  border-top: 1px solid var(--accent-color);
+  flex-wrap: wrap; /* Allows items to wrap */
+  padding: 1.5% 5%;
+  gap: 20px; /* Adds some space between the child elements */
+}
+
+.Ldiv, .Rdiv {
+  flex: 1; /* Each takes equal space */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  min-width: 250px; /* Minimum width before they stack */
+}
+
+.pasteTextArea {
+  width: 100%; /* Makes textarea fully occupy its parent's width */
+  height: 100%; /* Adjust height as needed */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  border: 1px solid var(--accent-color);
+}
+
+.uploadPdfButton {
+  min-width: 250px; /* Ensure it has a minimum width */
+  display: inline-block; /* Respect width and padding */
+  text-align: center; /* Center the text */
+}
+
 
 .CenterContent {
   background-color: whitesmoke;
@@ -220,6 +264,8 @@ body {
   padding-right: 10%;
   margin-left: 265px; 
 }
+
+
 
 .CenterItem {
   display: flex;
@@ -230,14 +276,13 @@ body {
 .AppButton {
   background-color: var(--accent-color); /* Light green background */
   color: black; /* White text color for contrast */
-  border: none; /* No border */
   padding: 10px 20px; /* Vertical and horizontal padding */
   font-size: 1.2rem; /* Text size */
   font-weight: 600;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Cursor indicates it's clickable */
   transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect and press */
-  margin: 10px 15px 20px 15px;
+  margin: 10px;
 }
 
 .AppButton:hover, .AppButton:focus {
@@ -253,6 +298,7 @@ body {
   visibility: hidden;
   opacity: 0;
 }
+
 /* Global styles */
 body {
   background-color: whitesmoke;
@@ -620,19 +666,4 @@ body {
 .card:hover {
   border-color: var(--secondary-color);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
-}
-
-.contain2 {
-  display: flex;
-  /* justify-content: space-between; */
-  justify-content: center;
-  align-items: center;
-}
-
-.Ldiv, .Rdiv {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 48%; /* Example width */
-  height: 100%; /* Take full height of the parent */
 }
