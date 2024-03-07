@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AutorenewIcon from "@mui/icons-material/Autorenew"; // Icon for generating content
+import FileUploadIcon from "@mui/icons-material/FileUpload"; // Icon for uploading files
 import PdfToData from "./pdfToData"; // Ensure this path is correct
 import Flashcard from "./flashcard"; // Ensure this path is correct
 import "@/app/globals.css"; // Ensure this path is correct
@@ -61,6 +63,7 @@ function Generator() {
     <div className="studioDiv">
       <h2 className="Heading2">Step 1: Upload or Paste Notes</h2>
       <div className="contain2">
+        {/* PdfToData component should ideally have its own button inside for selecting files */}
         <PdfToData onFileSelected={handleFileSelected} />
         <div className="Rdiv" style={{ display: "flex", alignItems: "center" }}>
           <textarea
@@ -89,15 +92,13 @@ function Generator() {
           onChange={(e) => setSelectedValue(parseInt(e.target.value))}
           style={{ flex: "1", marginRight: "5px" }}
         />
-        <div>
-          <button
-            className="AppButton uploadPdfButton"
-            disabled={!text}
-            onClick={getFlashcards}
-          >
-            Generate Flashcards
-          </button>
-        </div>
+      </div>
+
+      <div className="contain2">
+        <button className="AppButton" disabled={!text} onClick={getFlashcards}>
+          <AutorenewIcon />
+          Generate Flashcards
+        </button>
       </div>
 
       {!loading && flashcards.length > 0 && (

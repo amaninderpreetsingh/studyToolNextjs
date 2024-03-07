@@ -1,4 +1,5 @@
 import React from "react";
+import FileUploadIcon from "@mui/icons-material/FileUpload"; // Import the icon
 import "@/app/globals.css";
 
 const PdfToData = (props) => {
@@ -38,14 +39,16 @@ const PdfToData = (props) => {
 
   return (
     <div className="Ldiv">
-      <label htmlFor="pdfInput" className="generate-pdf-button button">
-        <span className="AppButton uploadPdfButton">Upload PDF</span>
+      <label htmlFor="pdfInput" className="AppButton uploadPdfButton">
+        <FileUploadIcon style={{ marginRight: "8px" }} />{" "}
+        {/* Add the icon next to the button text */}
+        Upload PDF
         <input
-          className="Invisible"
           type="file"
           accept=".pdf"
           onChange={handleFileChange}
           id="pdfInput"
+          style={{ display: "none" }} // Keep the input hidden
         />
       </label>
     </div>

@@ -591,15 +591,13 @@ body {
 /* Flex container to align and justify card items */
 .card-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
-  margin-top: 5%;
+  justify-content: space-around; /* Or 'space-between' if you prefer */
+  gap: 10px; /* Adjust the space between cards */
 }
-
 .card {
-  width: 32%;
-  min-width: 250px;
+  width: 27%;
+  min-width: 275px;
   height: 250px;
   border-radius: 5px;
   background: var(--background-color);
@@ -658,9 +656,10 @@ body {
 }
 
 .text-body {
-  color: whitesmoke;
+  color: gray;
   font-style: italic;
   overflow: hidden;
+  text-align: center;
 }
 
 .text-title {
@@ -742,3 +741,57 @@ body {
   border-radius: 4px;
 }
 
+.cardv2 {
+  flex: 1;
+  min-width: 250px; /* Minimum width of each card */
+  max-width: calc(30% - 20px); /* Adjust the percentage for desired number of columns */
+  margin-bottom: 20px; /* Space between rows of cards */
+  background-color: white; /* White background for better readability */
+  color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  position: relative; /* Needed for absolute positioning inside the card */
+}
+
+.cardv2 .card-title {
+  color: var(--accent-color); /* Title in accent color */
+  font-size: 1.5rem; /* Adjust the size as needed */
+  margin-bottom: 0.5em; /* Space below the title */
+  text-align: center;
+}
+
+.cardv2 .card-number-of-cards {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  color: gray; /* Gray color for the card count */
+  font-size: 0.85rem; /* Smaller font size */
+}
+
+.cardv2 .card-summary {
+  color: gray; /* Gray color for summary/description */
+  margin-top: 1em; /* Space above the summary */
+  
+}
+
+.cardv2 .card-image img {
+  border-radius: 10px; /* Match to the card's border-radius */
+  margin-bottom: 1em; /* Space below the image */
+}
+
+/* Adjustments for the imageUploadLabel if necessary */
+.cardv2 .imageUploadLabel {
+  /* Your styles for the label */
+}
+
+.FCimage {
+  height: 100px;
+  width: 200px;
+  object-fit: cover; /* Cover the area of the element, maintaining the aspect ratio */
+  object-position: center; /* Center the image within the element */
+  display: block; /* Remove the display:flex; it's not needed for img tags */
+  margin: auto; /* Center the image within its container if it's not already */
+  background-color: #2a2a2a; /* Background color in case the image doesn't cover the area */
+}
