@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 function QuizletExtractor() {
   const [link, setLink] = useState("");
@@ -38,6 +39,7 @@ function QuizletExtractor() {
           className="AppButton uploadPdfButton"
           onClick={handleExtractClick}
         >
+          <CloudDownloadIcon style={{ marginRight: "8px" }} />
           Extract Flashcards
         </button>
         <div>
@@ -47,7 +49,7 @@ function QuizletExtractor() {
               {flashcard.side2}
             </div>
           ))}
-        </div>{" "}
+        </div>
       </div>
     </div>
   );
