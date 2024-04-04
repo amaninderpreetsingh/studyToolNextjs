@@ -18,7 +18,6 @@ function Generator() {
 
   // Fetches flashcards from the API
   const getFlashcards = async () => {
-    // Note: Replace 'sk-...' with your actual API key
     const API_KEY = "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";
 
     if (!loading) {
