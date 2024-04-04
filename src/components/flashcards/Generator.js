@@ -18,8 +18,6 @@ function Generator() {
 
   // Fetches flashcards from the API
   const getFlashcards = async () => {
-    const API_KEY = "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";
-
     if (!loading) {
       setLoading(true);
       const APIBody = {
@@ -41,7 +39,7 @@ function Generator() {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${API_KEY}`,
+              Authorization: `Bearer ${process.env.API_KEY}`,
             },
             body: JSON.stringify(APIBody),
           }
